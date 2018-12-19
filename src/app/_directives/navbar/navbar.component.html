@@ -1,0 +1,16 @@
+<header id="header">
+    <div class="container">
+        <h6 (click)="goToHome()"> {{ homeNavBarText }}</h6>
+        <nav id="nav" (click)="select($event)">
+            <ul [ngClass]="{'open':selected}">
+                <li (click)="clickNews()">{{ newsNavBarText }}</li>
+                <li><a [routerLink]="['/login']">{{ logoutNavBarText }}</a></li>
+                <li>
+                    <select [(ngModel)]="selectedOptionValue" (change)="selectLang($event.target.value)">
+                        <option *ngFor="let lang of supportedLangs" [value]="lang.value" (click)="selectLang(lang.value)" class="btn btn-default" [class.btn-primary]="isCurrentLang(lang.value)">{{ lang.display }}</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>

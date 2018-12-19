@@ -1,0 +1,12 @@
+﻿<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <h3 class="welcome-title">{{welcomeText}} {{currentUser.firstName}}!</h3>
+        <carousel></carousel>
+        <h5>All registered users are:</h5>
+        <ul class="registered-users">
+            <li *ngFor="let user of users">
+                <b>{{userNameText}}:</b> {{user.username}} <b>{{firstNameText}}:</b> {{user.firstName}} <b>{{lastNameText}}:</b> {{user.lastName}} - <a (click)="deleteUser(user.id)">{{deleteBtnText}}</a>
+            </li>
+        </ul>
+    </div>
+</div>

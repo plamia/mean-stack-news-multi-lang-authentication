@@ -1,0 +1,130 @@
+@import './variables';
+@import './mixins/responsive';
+
+body {
+    background-color: $brand-dark-white;
+}
+
+.container-fluid {
+    padding: 0px;
+    margin: 0px;
+    & .padding-0 {
+        padding: 0px;
+    }
+}
+
+.popup-content {
+    width: 400px;
+    height: 550px;
+    margin: 0 auto;
+    padding: 20px;
+    background: $brand-white;
+}
+
+.news-navbar {
+    background: $brand-light-yellow;
+    color: $brand-blue-title;
+    & h2 {
+        margin-left: 40px;
+        font-weight: 100;
+    }
+}
+
+.margin-top-10 {
+    margin-top: 10px;
+}
+
+.welcome-title {
+    text-align: center;
+    font-weight: 100;
+    color: $brand-blue-title;
+}
+
+.registered-users {
+    text-decoration: none;
+    list-style: none;
+}
+
+.img-news {
+    cursor: pointer;
+    height: auto;
+    width: auto;
+    max-width: 500px;
+    max-height: 500px;
+    border: 3px solid gray;
+    box-shadow: 2px 2px 7px 6px;
+    margin: 20px 0px 20px 0px;
+    @include bp-sm-max {
+        max-width: 250px;
+        max-height: 400px;
+     }
+}
+
+.img-news-popup {
+    height: auto;
+    width: auto;
+    max-width: 300px;
+    max-height: 300px;
+    border: 3px solid gray;
+    box-shadow: 2px 2px 7px 6px;
+}
+
+.part-text {
+    display:inline-block;
+    width:300px;
+    white-space: nowrap;
+    overflow:hidden !important;
+    text-overflow: ellipsis;
+}
+
+.padding-20 {
+    padding: 20px;
+}
+
+.margin-10-top {
+    margin-top: 10px;
+}
+
+.news-popup-info {
+  height: 500px;
+  width: 500px;
+    @include bp-sm-max {
+        width: 370px;
+        height: auto;
+        margin: auto 0;
+    }
+}
+
+.all-news {
+  padding: 0px;
+  text-align: center;
+  list-style: none;
+}
+
+.title-news {
+   text-align: center;
+   color: $brand-blue-title;
+}
+
+.background-white {
+   background-color: $brand-white;
+}
+
+.subtitle-news {
+    background: darkgray;
+    font-size: 18px;
+    color: $brand-white;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+    & > div {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+
